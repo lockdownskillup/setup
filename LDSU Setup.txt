@@ -1,0 +1,175 @@
+https://notepad-plus-plus.org/downloads/v7.8.5/ -- download 32bit version (believe this has better plugin support)
+Install N++, then go to Plugins > Plugins Admin and install the following:
+* Compare
+* CsvQuery
+* jN
+* JSON Viewer
+* NppFTP
+* NppHash
+* Poor Man's T-Sql Formatter
+* XBrackets Lite
+* XML Tools
+* Zoom Disabler
+
+
+https://developers.redhat.com/products/openjdk/download -- download MSIs for "OpenJDK 8 Windows 64-bit" and "OpenJDK 8 Windows 32-bit"
+Install 2x OpenJDK. Do the 64-bit version first.
+* Now follow this guide to edit the path https://www.architectryan.com/2018/03/17/add-to-the-path-on-windows-10/ //TODO: incorporate enough of this here to guard against linkrot
+* Adjust the following entries into this order, if req'd:
+  * C:\Program Files\RedHat\java-1.8.0-openjdk-1.8.0.242-3\bin
+  * C:\Program Files\RedHat\java-1.8.0-openjdk-1.8.0.242-3\jre\bin
+  * C:\Program Files (x86)\RedHat\java-1.8.0-openjdk-1.8.0.242-3\bin
+  * C:\Program Files (x86)\RedHat\java-1.8.0-openjdk-1.8.0.242-3\jre\bin
+
+
+https://git-scm.com/downloads -- download 64bit windows version
+Install Git
+* For default editor, choose Notepad++
+* For terminal editor, choose "Use Windows' default"
+(otherwise leave as default)
+
+
+https://developer.salesforce.com/tools/sfdxcli -- 64bit (***not right now?)
+Install SFDX
+
+
+https://code.visualstudio.com/ -- download VS Code (it's different to VS)
+Install VS Code, then
+* Go to https://github.com/tonsky/FiraCode/releases/tag/2, scroll down a lot and download FiraCode_2.zip
+  Extract the TTF folder to your desktop (or whatever) then go in, select all files, right click > install
+  You can then delete the folder from your desktop again
+* Go to the Extensions tab (down the left hand side) in VSCode and install the following:
+  * CoenraadS.bracket-pair-colorizer
+  * Shan.code-settings-sync
+  * msjsdiag.debugger-for-chrome
+  * jinsihou.diff-tool
+  * bierner.emojisense
+  * dsznajder.es7-react-js-snippets
+  * humy2833.ftp-simple
+  * eamodio.gitlens
+  * sysoev.language-stylus
+  * ryu1kn.partial-diff
+  * Sophisticode.php-formatter
+  * TaoKlerks.poor-mans-t-sql-formatter-vscode
+  * ms-vscode.PowerShell
+  * esbenp.prettier-vscode
+  * mechatroner.rainbow-csv
+  * imperez.smarty
+  * cymonk.sql-formatter
+  * wesbos.theme-cobalt2
+  * mike-lischke.vscode-antlr4
+  * aeschli.vscode-css-formatter
+  * ms-azuretools.vscode-docker (was PeterJausovec.vscode-docker)
+  * slevesque.vscode-hexdump
+  * wix.vscode-import-cost
+  * vscjava.vscode-java-dependency
+  * jkjustjoshing.vscode-text-pastry
+  * pflannery.vscode-versionlens
+  * DotJoshJohnson.xml
+  * salesforce.salesforcedx-vscode (***not right now?)
+
+
+Install "Windows Terminal (Preview)" from the Microsoft Store
+
+
+https://github.com/coreybutler/nvm-windows/releases/tag/1.1.7 -- download nvm-setup.zip
+Install nvm-windows
+* Go to Windows Terminal > nvm install 14.2.0
+* nvm use 14.2.0
+
+
+https://mran.microsoft.com/download
+https://rstudio.com/products/rstudio/download/#download -- get the Open Source Edition of Desktop
+https://cran.r-project.org/bin/windows/Rtools/index.html -- get Rtools35
+Install R
+Install RStudio
+Install Rtools
+
+
+https://visualstudio.microsoft.com/vs/ -- download the "Community Edition"
+https://marketplace.visualstudio.com/items?itemName=SSIS.SqlServerIntegrationServicesProjects
+Install Visual Studio
+* When prompted for Workloads, choose "Data storage and processing" and "Desktop development with C++"
+(reboot probably req'd here)
+Install SSIS
+
+
+https://www.microsoft.com/en-in/sql-server/sql-server-downloads -- download Developer edition
+Install SQL Server
+* Go to Installation tab, "New SQL Server stand-alone installation"
+* Microsoft Update : tick
+** At some point you'll be asked "Windows Authentication" or "SQL Server and Windows Authentication" -- select the latter
+* Install Rules : might flag a warning on Windows firewall -- this is probably OK to ignore
+* Product Key: Free Edition > Developer
+* Feature Selection > Select All
+* Database Engine Configuration > Server Configuration : Add Current User
+* Analysis Services Configuration > Server Configuration : Add Current User
+* Distributed Replay Configuration : Add Current User
+* You will come to a screen about machine learning that will probably say it can't find the server and give you four links.
+  Download the four links somewhere (e.g. folder on desktop) and then point the installer at these.
+* Apply PolyBase fix per "Fix" section of https://nielsberglund.com/2019/11/20/fix-polybase-in-sql-server-2019-developers-edition/  //TODO: incorporate enough of this here to guard against linkrot
+
+
+https://docs.microsoft.com/en-us/sql/reporting-services/install-windows/install-reporting-services?view=sql-server-ver15
+Install SQL Server Reporting Services
+* Free > Developer
+Then, in the Config Manager, step down the items on the left
+* Web Service URL : change TCP port to 8085
+* Database : change database
+* Apply
+
+
+https://docs.microsoft.com/en-us/sql/ssms/download-sql-server-management-studio-ssms?view=sql-server-ver15#download-ssms
+https://docs.microsoft.com/en-us/sql/azure-data-studio/download-azure-data-studio?view=sql-server-ver15 -- download "User Installer"
+Install SSMS
+Install Azure Data Studio
+
+
+https://www.enterprisedb.com/downloads/postgres-postgresql-downloads -- download 12.2
+https://www.pgadmin.org/download/pgadmin-4-windows/
+Install PostgreSQL
+* Exclude pgAdmin 4 (it'll be old)
+* Set a password
+Start StackBuilder
+* Set to local server in dropdown
+* Under Spatial Extensions select PostGIS
+Install pgAdmin
+
+
+http://www.postgresonline.com/journal/archives/379-PLV8-binaries-for-PostgreSQL-10-windows-both-32-bit-and-64-bit.html -- download file mentioned in the "Update 2019-11-13" section
+Install PL/V8 (yes this is kinda janky):
+* Open xtuple's plv8 ZIP, and extract the pg12w64 folder to your desktop (or whatever)
+* Go into share > extension and open the 3x .SQL files in N++
+* Stick -- at the beginning of the "#include" line in each
+* Back up a couple levels, back to having bin / lib / share
+* Go to C:\Program Files\PostgreSQL\12\ in Explorer
+* Copy the 3x folders from the ZIP into the PostgreSQL folder -- so bin contents go into bin etc.
+  * This should not incur any overwrites.
+//TODO: prepare updated version of this file without the requirement for the corrections to the SQL files
+
+https://www.mongodb.com/download-center/community -- 4.2.5 current release ... Windows x64 ... MSI
+Install MonogoDB
+* Complete
+* Let it install Compass
+
+
+https://robomongo.org/download -- *don't* download the double pack, just Robo3T ... fill in some details ... EXE
+Install Robo3T
+
+
+https://sqlitebrowser.org/dl/ -- Standard installer for 64-bit Windows
+Install DB Browser for SQLite
+
+
+Install chocolatey (per https://chocolatey.org/install) as this seemed to be the best way to get the build chain for Node.js installed (***not right now?)
+	Run from an admin Powershell:
+	Set-ExecutionPolicy Bypass -Scope Process -Force; [System.Net.ServicePointManager]::SecurityProtocol = [System.Net.ServicePointManager]::SecurityProtocol -bor 3072; iex ((New-Object System.Net.WebClient).DownloadString('https://chocolatey.org/install.ps1'))
+choco install visualstudio2017-workload-nodebuildtools
+
+
+https://docs.microsoft.com/en-us/sql/samples/adventureworks-install-configure?view=sql-server-ver15
+* Grab the 2017 OLTP verison
+Follow instructions to restore backup
+
+
+TODO: VirtualBox -> Docker?
