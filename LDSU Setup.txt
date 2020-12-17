@@ -1,11 +1,16 @@
-https://notepad-plus-plus.org/downloads/v7.8.5/ -- download 32bit version (believe this has better plugin support)
+https://notepad-plus-plus.org/downloads/v7.9.1/ -- download 64bit version
+You might get a message about 
+
 Install N++, then go to Plugins > Plugins Admin and install the following:
 * Compare
 * CsvQuery
-* jN
+* jN Notepad++ Plugin
 * JSON Viewer
+* Mime tools (if not already installed)
+* Npp Converter (if not already installed)
+* NppCrypt (replacing NppHash)
+* NppExport (if not already installed)
 * NppFTP
-* NppHash
 * Poor Man's T-Sql Formatter
 * XBrackets Lite
 * XML Tools
