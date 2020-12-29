@@ -1,14 +1,19 @@
-https://notepad-plus-plus.org/downloads/v7.9.1/ -- download 64bit version
-You might get a message about 
+**Note**
+New versions might have been released since this was last updated, and some of the links might therefore be out-of-date.
+As a general rule: install the latest version, unless otherwise specified. If anything is unclear, or doesn't seem to work, please raise an Issue.
 
-Install N++, then go to Plugins > Plugins Admin and install the following:
+
+https://notepad-plus-plus.org/downloads/ -- download 64bit version
+
+Install N++, then go to Plugins > Plugins Admin and install the following.
+You might get a message about needing to install .Net Framework at some point (it should go get the right one for you); this will cause one [or more] of the plugins to ~"not work"... don't remove it, just restart N++ and it should work.
 * Compare
 * CsvQuery
 * jN Notepad++ Plugin
 * JSON Viewer
 * Mime tools (if not already installed)
 * Npp Converter (if not already installed)
-* NppCrypt (replacing NppHash)
+* NppCrypt (this replacing NppHash that presumably doesn't have a 64bit version)
 * NppExport (if not already installed)
 * NppFTP
 * Poor Man's T-Sql Formatter
@@ -17,10 +22,10 @@ Install N++, then go to Plugins > Plugins Admin and install the following:
 * Zoom Disabler
 
 
-https://developers.redhat.com/products/openjdk/download -- download MSIs for "OpenJDK 8 Windows 64-bit" and "OpenJDK 8 Windows 32-bit"
+https://developers.redhat.com/products/openjdk/download -- download MSIs for "OpenJDK 8 Windows 64-bit" and "OpenJDK 8 Windows 32-bit" (get the latest version of 8, but not 11 or 15 at this point).
 Install 2x OpenJDK. Do the 64-bit version first.
 * Now follow this guide to edit the path https://www.architectryan.com/2018/03/17/add-to-the-path-on-windows-10/ //TODO: incorporate enough of this here to guard against linkrot
-* Adjust the following entries into this order, if req'd:
+* Adjust the following entries into this order, if req'd, noting that the exact version might vary:
   * C:\Program Files\RedHat\java-1.8.0-openjdk-1.8.0.242-3\bin
   * C:\Program Files\RedHat\java-1.8.0-openjdk-1.8.0.242-3\jre\bin
   * C:\Program Files (x86)\RedHat\java-1.8.0-openjdk-1.8.0.242-3\bin
